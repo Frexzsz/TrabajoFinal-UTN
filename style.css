@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@600&display=swap'); /*Logo*/
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: 'Abel', sans-serif;
+}
+body{
+
+	background-image: url('background.jpg');
+	background-size: cover;
+
+}
+.navegacion{
+	width: 90%;
+	height: 100px;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.navegacion_logo a{
+	color: white;
+	text-decoration: none;
+	font-size: 48px;
+}
+.navegacion_lista div{
+	list-style: none;
+	display: inline;
+	margin-left: 50px;
+}
+.navegacion_lista_link a{
+	color: white;
+	text-decoration: none;
+	font-size: 24px;
+	padding: 5px 8px;
+}
+.navegacion_lista_link a:hover{
+	background-color: rgba(255, 255, 255, 0.1);
+	color: #dadada;
+	border-radius: 20px;
+	padding: 5px 8px;
+}
+
+.pie{
+	display: flex;
+	justify-content: space-evenly;
+	
+	width: 100%;
+	padding: 0 50px;
+}
+.pie_caja{
+	font-size: 1.3rem;
+	color: white;
+}
+.pie_caja h2{
+	font-size: 1.5rem;
+}
+.pie_caja_redes a{
+	display: block;
+	color: white;
+	text-decoration: none;
+}
+.pie_caja_redes a:hover{
+	color: rosybrown;
+	transform: scale(1.1);
+}

@@ -3,11 +3,44 @@
   <head>
     <meta charset="utf-8">
     <title>la formulario multipaso</title>
-    <link rel="stylesheet" href="stylebarbeta.css">
+    <link rel="stylesheet" href="/FormularioDeProceso/stylebarbeta.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
   </head>
   <body>
-    
+    <!------------------- Navbar----------------->
+    <header>
+      <div class="logo">Catering</div>
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <nav class="nav-bar">
+        <ul>
+          <li>
+            <a href="#" class="active">Home</a>
+          </li>
+          <li>
+            <a href="/Contacto/contacto.html">Contacto</a>
+          </li>
+          <li>
+            <a href="/Servicios/servicio.html">Servicios</a>
+          </li>
+          <li>
+            <a href="/Sobre Nosotros/sobreNosotros.html">Sobre Nosotros</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+<!---------------- barra formulario fondo ----------------->
+    <div class="Boxblock">
+      <div class="BoxFondoGris">
+        <h2>Formulario</h2>
+      </div>
+    </div>
+<!---------------- formulario ----------------->
+<div class="BoxCenter">
+  <div class="boxFormulario">
   	<div class="caja">
   		<span class="paso activo">1</span>
   		<span class="paso paso2">2</span>
@@ -79,6 +112,8 @@
 
 
     </form>
+  </div>
+</div>
 
 
   
@@ -88,6 +123,8 @@
 
 
 <script>
+  
+  
   $("document").ready(function(){
 
     $(".btn_form-1").click(function(){
@@ -125,12 +162,7 @@
     });
 
   });
-  
-
-
-
-
-
+ 
 </script>
 
 

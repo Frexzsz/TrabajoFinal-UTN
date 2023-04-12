@@ -10,6 +10,10 @@
 
 body {
   background: linear-gradient(90deg, #4C2E6D 0%, #483838 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 header {
@@ -147,6 +151,9 @@ footer ul li a:hover {
 
 
 .Contenedor{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #f8f9fa;
   margin: 100px;
   padding: 100px;
@@ -154,5 +161,6 @@ footer ul li a:hover {
   box-shadow: 9px 9px 34px -4px rgba(255,0,0,0.75);
 -webkit-box-shadow: 9px 9px 34px -4px rgba(255,0,0,0.75);
 -moz-box-shadow: 9px 9px 34px -4px rgba(255,0,0,0.75);
+
 }
 

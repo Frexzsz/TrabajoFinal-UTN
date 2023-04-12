@@ -10,10 +10,6 @@
 
 body {
   background: linear-gradient(90deg, #4C2E6D 0%, #483838 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
 }
 
 header {
@@ -55,7 +51,7 @@ header {
   background: #fefefe;
 }
 
-.nav-bar ul li a.active {
+.nav-bar ul li a.nosotros {
   color: #11101b;
   background: #fefefe;
 }
@@ -115,7 +111,7 @@ header {
 }
 
 
-footer {
+/* footer {
   background-color: #f8f9fa;
   padding: 20px 0;
   position: absolute;
@@ -147,13 +143,10 @@ footer ul li a {
 footer ul li a:hover {
   background-color: #212529;
   color: #fff;
-}
+} */
 
 
 .Contenedor{
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: #f8f9fa;
   margin: 100px;
   padding: 100px;
@@ -163,4 +156,6 @@ footer ul li a:hover {
 -moz-box-shadow: 9px 9px 34px -4px rgba(255,0,0,0.75);
 
 }
+
+
 

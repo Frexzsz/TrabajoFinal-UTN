@@ -1,0 +1,43 @@
+.caja{
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  position: relative;
+}
+
+.paso{
+  display: flex;
+  background-color: #DEDEDE;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid lightgray;
+  font-size:1.5rem;
+  font-weight:bold;
+  color: lightgray;
+  z-index: 1;
+}
+
+.barra{
+  height: 4px;
+  width: 100%;
+  background-color: lightgray;
+  position: absolute;
+  margin-top: 25px;
+}
+
+.progreso{
+  position: absolute;
+  height: 4px;
+  width: 0;
+}
+
+.activo{
+  color: #08FF00;
+  border-color: #08FF00;
+}
+
+/*---------FORMULARI ABAJO DE AQUI--------*/
+

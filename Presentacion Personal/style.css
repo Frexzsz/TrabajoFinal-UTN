@@ -101,7 +101,7 @@ footer ul li a:hover {
 }
 #banner::before{
   content: '';
-  background: rgba(41, 41, 63, 0.6);
+  background: rgba(16, 16, 63, 0.6);
   position: absolute;
   width: 100%;
   height: 45vh;
@@ -158,7 +158,7 @@ footer ul li a:hover {
 }
 
 .contenido{
-  background: rgba(41, 41, 63, 0.6);
+  background: rgba(16, 16, 63, 0.6);
   padding: 1em;
   border-radius: 10%;
   margin: 0px 10px;
@@ -166,7 +166,7 @@ footer ul li a:hover {
 }
 
 .contenido:hover{
-  border: 1px solid #ca1836;
+  border: 1px solid #f7e2c3;
 }
 /* Responsive */
 @media only screen and (max-width: 1320px) {

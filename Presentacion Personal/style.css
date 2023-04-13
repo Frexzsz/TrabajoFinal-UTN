@@ -136,11 +136,13 @@ footer ul li a:hover {
 
 #personas{
   padding: 50px 50px;
+  
+}
+.contenedor{
   display: flex;
   justify-content: center;
   text-align: center;
 }
-
 
 /* Responsive */
 @media only screen and (max-width: 1320px) {

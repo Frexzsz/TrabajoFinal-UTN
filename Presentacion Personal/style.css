@@ -9,7 +9,7 @@
 }
 
 body {
-  background: linear-gradient(90deg, #4C2E6D 0%, #483838 100%);
+  background-image: url(https://i.imgur.com/ZUkMPnJ.jpg);
 }
 
 header {
@@ -94,7 +94,7 @@ footer ul li a:hover {
 
 #banner{
   padding: 0 50px;
-  background-image: url(https://i.imgur.com/ZUkMPnJ.jpg);
+
   background-size: cover;
   background-position: center;
   height: 45vh;
@@ -116,7 +116,7 @@ footer ul li a:hover {
   justify-content: center;
 }
 
-.titulo h1{
+.titulo div h1{
   font-size: 30px;
   font-weight: 400;
   padding: 10px 0px;
@@ -138,12 +138,35 @@ footer ul li a:hover {
   padding: 50px 50px;
   
 }
+
+
 .contenedor{
   display: flex;
   justify-content: center;
   text-align: center;
 }
 
+.contenedordos {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.contenedortres {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.contenido{
+  background: linear-gradient(90deg, rgba(117, 87, 0, 0) 0%, rgba(251, 26, 26, 0.21) 100%);
+  padding: 1em;
+  border-radius: 10%;
+  margin: 0px 10px;
+}
+
+.contenido:hover{
+  border: 1px solid #ca1836;
+}
 /* Responsive */
 @media only screen and (max-width: 1320px) {
   header {
@@ -178,6 +201,7 @@ footer ul li a:hover {
     background: #11101b;
     transition: 0.5s;
     overflow: hidden;
+    z-index: 100;
   }
   .nav-bar.active {
     height: 450px;

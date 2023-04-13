@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>la formulario multipaso</title>
-    <link rel="stylesheet" href="/FormularioDeProceso/stylebarbeta.css">
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/FormularioDeProceso/stylebarbeta.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <!------------------- Navbar----------------->
@@ -32,139 +36,198 @@
         </ul>
       </nav>
     </header>
-<!---------------- barra formulario fondo ----------------->
+    <!---------------- barra formulario fondo ----------------->
     <div class="Boxblock">
       <div class="BoxFondoGris">
         <h2>Formulario</h2>
       </div>
     </div>
-<!---------------- formulario ----------------->
-<div class="BoxCenter">
-  <div class="boxFormulario">
-  	<div class="caja">
-  		<span class="paso activo">1</span>
-  		<span class="paso paso2">2</span>
-  		<span class="paso paso3">3</span>
-  		<span class="paso paso4">4</span>
-  		<div class="barra">
-  			<span class="progreso"></span>
-  		</div>
-  	</div>
+    <!---------------- formulario ----------------->
+    <div class="BoxCenter">
+      <div class="boxFormulario">
+        <div class="BoxCirculos">
+          <div class="caja">
+            <span class="paso activo">1</span>
+            <span class="paso paso2">2</span>
+            <span class="paso paso3">3</span>
+            <span class="paso paso4">4</span>
+            <div class="barra">
+              <span class="progreso"></span>
+            </div>
+          </div>
+        </div>
+        <!---------------- formularioUsuario ----------------->
+        <div>
+          <form class="BoxForm" id="Usuario">
+            <legend class="TextUsuario">Dato de Usuario</legend>
+            <label for="nombre" class="FormularioLabel">Nombre:</label>
+            <input
+              type="text"
+              name="nombre"
+              id="nombre"
+              class="FormularioInput"
+            />
+            <label for="apellido" class="FormularioLabel">Apellido:</label>
+            <input
+              type="text"
+              name="apellido"
+              id="apellido"
+              class="FormularioInput"
+            />
+            <label for="telefono" class="FormularioLabel">Telefono:</label>
+            <input
+              type="text"
+              name="telefono"
+              id="telefono"
+              class="FormularioInput"
+            />
+            <label for="correo" class="FormularioLabel">Correo:</label>
+            <input
+              type="text"
+              name="correo"
+              id="correo"
+              class="FormularioInput"
+            />
+          </form>
+          <div class="BoxButtom1">
+            <button class="btn_siguiente-1 styleSiguiente" id="btn1">
+              Siguiente
+            </button>
+          </div>
+        </div>
+        <!---------------- formulario Servicio----------------->
+        <div hidden="" id="Servicio">
+          <form class="BoxForm">
+            <legend>Servicio</legend>
+            <label for="servicio" class="FormularioLabel"
+              >Elegir Servicio:</label
+            >
+            <select class="FormularioInput">
+              <option>Malo</option>
+              <option>Semi mierda</option>
+              <option>Premium</option>
+              <option style="display: none" selected></option>
+            </select>
+            <label for="fecha" class="FormularioLabel">Fecha:</label>
+            <input type="date" name="" id="fecha" class="FormularioInput" />
+            <label for="comida" class="FormularioLabel">Comida:</label>
+            <textarea></textarea>
+            <select name="comida" id="comida" class="FormularioInput Comida">
+              <option>arroz</option>
+              <option>fidio</option>
+              <option>lenteja</option>
+              <option>polenta</option>
+              <option>mortadela (solo premium)</option>
+            </select>
+          </form>
+          <div class="BoxButtom1">
+            <button class="btn_atras-1 styleAtras" id="btn-Back1">Atras</button>
+            <button class="btn_siguiente-2 styleSiguiente" id="btn1">
+              Siguiente
+            </button>
+          </div>
+        </div>
+        <!---------------- formulario Confirmacion ----------------->
+        <div hidden="" id="Confirmacion">
+          <form class="BoxForm">
+            <legend>Confirmacion:</legend>
+            aca se supone que mostramos todo lo anterior y bonito
+          </form>
+          <div class="BoxButtom1">
+            <button class="btn_atras-1 styleAtras" id="btn-Back2">Atras</button>
+            <button class="btn_finalizar" id="btn3">Finalizar</button>
+          </div>
+        </div>
+        <!---------------- Final/Agradecimiento----------------->
+        <div class="boxCheck" hidden="" id="Check">
+          <div class="BoxCheckHijo">
+            <div class="TextoCheck">
+              <span>¡Gracias por contratarnos!</span>
+            </div>
+            <span class="Check paso4"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      /*-----WIZARD JQUERY-----*/
 
+      $("document").ready(function () {
+        $(".btn_siguiente-1").click(function () {
+          $(".paso2").css({ "border-color": "#08FF00", color: "#08FF00" });
+          $(".progreso").css({ background: "#08FF00", width: "30%" });
+          $(".paso3").css({ "border-color": "lightgray", color: "lightgray" });
+          $(".activo").text("✓");
+          $(".paso2").text("2");
+          /*-------siguiente formulario = de Usuario al Servicio (2) --------*/
+          $("#Usuario").hide();
+          $("#Confirmacion").hide();
+          $("#Servicio").show();
+          $("#btn1").hide();
+        });
 
+        /*Boton "atras(pasa del 2 al 1)"*/
+        $("#btn-Back1").click(function(){  
+          $(".paso1").css({ "border-color": "#08FF00", color: "#08FF00" });
+          $(".progreso").css({ background: "#08FF00", width: "30%" });
+          $(".paso2").css({ "border-color": "lightgray", color: "lightgray" });
+          $(".activo").text("✓");
+          $(".paso1").text("2");
 
-     <button class="btn_form-1">Paso 1</button>
-    <button class="btn_form-2">Paso 2</button>
-    <button class="btn_form-3">Paso 3</button>
-    <button class="btn_form-4">Paso 4</button>
+          $("#Confirmacion").hide();
+          $("#Servicio").hide();
+          $("#btn1").show();
+          $("#Usuario").show();
+        })
 
-    <form>
-      <fieldset>
-        <legend>Usuario</legend>
-        <label for="nombre">Nombre:</label>
-        <input type="text" name="nombre" id="nombre">
-        <label for="apellido">Apellido:</label>
-        <input type="text" name="apellido" id="apellido">
-        <labe for="dni">DNI:</label>
-        <input type="number" name="dni" id="dni">
+        $(".btn_siguiente-2").click(function () {
+          $(".paso3").css({ "border-color": "#08FF00", color: "#08FF00" });
+          $(".progreso").css({ background: "#08FF00", width: "60%" });
+          $(".paso4").css({ "border-color": "lightgray", color: "lightgray" });
+          $(".paso2").text("✓");
+          $(".paso3").text("3");
+          /*----------siguiente formulario = de servicio a Confirmacion (3) ----------*/
+          $("#Usuario").hide();
+          $("#Servicio").hide();
+          $("#Confirmacion").show();
+          $("#btn2").hide();
+          $("#btn-Back");
+        });
 
-      </fieldset>
+        /*Boton "atras(pasa del 3 al 2)"*/
+        $("#btn-Back2").click(function(){  
+          $(".paso2").css({ "border-color": "#08FF00", color: "#08FF00" });
+          $(".progreso").css({ background: "#08FF00", width: "30%" });
+          $(".paso3").css({ "border-color": "lightgray", color: "lightgray" });
+          $(".activo").text("✓");
+          $(".paso2").text("2");
 
-      <fieldset>
-        <legend>Contacto</legend>
-        <label for="correo">Correo:</label>
-        <input type="email" name="correo" id="correo">
-        <label for="telefono">Telefono:</label>
-        <input type="number" name="telefono" id="telefono">
-      </fieldset>
+          $("#Usuario").hide();
+          $("#Servicio").show();
+          $("#Confirmacion").hide();
+          $("#btn2").show();
+          
+        })
 
-      <fieldset>
-        <legend>Servicio</legend>
-        <label for="servicio">Elegir Servicio:</label>
-        <select>
-          <option>Malo</option>
-          <option>Semi mierda</option>
-          <option>Premium</option>
-          <option style="display: none;" selected></option>
-        </select>
-        <label for="fecha">Fecha:</label>
-        <input type="date" name="" id="fecha">
-        <label for="comida">Comida:</label>
-        <textarea></textarea>
-        <select name="comida" id="comida">
-          <option>arroz</option>
-          <option>fidio</option>
-          <option>lenteja</option>
-          <option>polenta</option>
-          <option>mortadela (solo premium)</option>
-        </select>
-      </fieldset>
+        
 
-      <fieldset>
-        <legend>Confirmacion:</legend>
-        aca
-        se
-        supone
-        que
-        mostramos
-        todo lo anterior y bonito
-      </fieldset>
+        $(".btn_finalizar").click(function () {
+          $(".paso4").css({ "border-color": "#08FF00", color: "#08FF00" });
+          $(".progreso").css({ background: "#08FF00", width: "90%" });
+          $(".paso3").text("✓");
+          $(".paso4").text("✓");
+          /*----------siguiente formulario final Check (4) ----------*/
+          $("#Usuario").hide();
+          $("#Servicio").hide();
+          $("#Confirmacion").hide();
+          $("#btn3").hide();
+          $("#Check").show();
+        });
 
-
-    </form>
-  </div>
-</div>
-
-
-  
-    
-
-
-
-
-<script>
-  
-  
-  $("document").ready(function(){
-
-    $(".btn_form-1").click(function(){
-      $(".paso2").css({"border-color":"lightgray","color":"lightgray"});
-      $(".progreso").css({"width":""});
-      $(".activo").text("1");
-      $(".paso2").text("2");
-    });
-
-    $(".btn_form-2").click(function(){
-      $(".paso2").css({"border-color":"#08FF00","color":"#08FF00"});
-      $(".progreso").css({"background":"#08FF00","width":"30%"});
-      $(".paso3").css({"border-color":"lightgray","color":"lightgray"});
-      $(".activo").text("✓");
-      $(".paso2").text("2");
-    });
-
-    $(".btn_form-3").click(function(){
-      $(".paso3").css({"border-color":"#08FF00","color":"#08FF00"});
-      $(".progreso").css({"background":"#08FF00","width":"60%"});
-      $(".paso4").css({"border-color":"lightgray","color":"lightgray"});
-      $(".paso2").text("✓");
-      $(".paso3").text("3");
-    });
-
-    $(".btn_form-4").click(function(){
-      $(".paso4").css({"border-color":"#08FF00","color":"#08FF00"});
-      $(".progreso").css({"background":"#08FF00","width":"90%"});
-      $(".paso3").text("✓");
-      $(".paso4").text("4");
-    });  
-
-    $(".enviar-form").click(function(){
-      $(".paso4").text("✓");
-    });
-
-  });
- 
-</script>
-
-
+        $(".enviar-form").click(function () {
+          $(".paso4").text("✓");
+        });
+      });
+    </script>
   </body>
 </html>

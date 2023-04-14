@@ -4,7 +4,6 @@
   padding: 0;
   list-style: none;
   text-decoration: none;
-  font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
 }
 
@@ -45,6 +44,7 @@ header {
   border-radius: 50px;
   transition: 0.2s;
   margin: 0.5px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .nav-bar ul li a:hover {
@@ -56,7 +56,12 @@ header {
   color: #11101b;
   background: #fefefe;
 }
+.logo img{
+  width: 85px;
+  height: 90%;
+}
 
+/* Banner */
 #banner{
   padding: 0 50px;
   background-size: cover;
@@ -66,29 +71,61 @@ header {
   width: 100%;
 }
 .titulo{
+  font-size: 30px;
   color: #ffffff;
   height: 100%;
   display: flex;
   align-items: center;
+  font-family: 'Nunito', sans-serif;
 }
 
 
-.logo img{
-  width: 85px;
-  height: 90%;
+/* Caja de cheft */
+#CheftP{
+  display: flex;
+  justify-content: center;
+}
+.chefts{
+  position: relative;
+  width: 380px;
+  height: 300px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.chefts:hover .capa{
+  visibility: visible;
+  border: 1px solid #fefefe;
+}
+.chefts img{
+  width: 380px;
+  height: 300px;
+  object-fit: cover;
+  transition: 0.5s ease;
+  padding: 15px;
+}
+.chefts:hover img{
+  transform: scale(1.1);
+}
+.capa{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #10103f99;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fefefe;
+  visibility: hidden;
 }
 
-.cheft img{
-  width: 500px;
-}
-
-
+/* Integrantes */
 #personas img{
   width: 100px;
   height: 100px;
   border-radius: 100%;
 }
-
 
 .CajaUno{
   display: flex;
@@ -107,17 +144,17 @@ header {
 .contenido{
   width: 330px;
   height: 230px;
-  background: rgba(16, 16, 63, 0.6);
+  background: #10103f99;
   padding: 1em;
   border-radius: 10%;
   margin: 0px 10px;
   color: #ffff;
 }
 
+/* Footer */
 footer {
   background-color: #11101b;
   padding: 20px 0;
-  /* position: absolute; */
   bottom: 0;
   width: 100%;
 }
@@ -126,6 +163,7 @@ footer p {
   margin: 0;
   color: #fff;
   padding: 10px 0px;
+  font-family: "Montserrat", sans-serif;
 }
 
 footer ul {
@@ -147,7 +185,7 @@ footer ul li a {
 
 footer ul li a:hover {
   background-color: #fefefe;
-  color: #000000;
+  color: #11101b;
 }
 
 @media only screen and (max-width: 1320px) {

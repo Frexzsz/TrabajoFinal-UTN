@@ -65,24 +65,23 @@ header {
   background: #121247be;
   width: 100%;
 }
-
-
 .titulo{
-  position: relative;
   color: #ffff;
   height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
 }
 
-.titulo div h1{
-  font-size: 30px;
-  font-weight: 400;
-  padding: 10px 0px;
-  margin: 15px 0px;
-  
+
+.logo img{
+  width: 85px;
+  height: 90%;
 }
+
+.cheft img{
+  width: 500px;
+}
+
 
 #personas img{
   width: 100px;
@@ -90,34 +89,25 @@ header {
   border-radius: 100%;
 }
 
-#personas div{
-  padding: 30px 30px;
-}
 
-#personas{
-  padding: 50px 50px;
-  
-}
-
-
-.contenedor{
+.CajaUno{
   display: flex;
   justify-content: center;
   text-align: center;
+  margin-bottom: 15px;
 }
 
-.contenedordos {
+.CajaDos {
   display: flex;
   justify-content: center;
   text-align: center;
+  margin-bottom: 15px;
 }
-.contenedortres {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
+
 
 .contenido{
+  width: 330px;
+  height: 230px;
   background: rgba(16, 16, 63, 0.6);
   padding: 1em;
   border-radius: 10%;

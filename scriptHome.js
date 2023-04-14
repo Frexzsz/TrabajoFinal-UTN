@@ -1,3 +1,5 @@
+// hamburger nav bar
+
 window.addEventListener("load", function () {
   hamburger = document.querySelector(".hamburger");
   hamburger.onclick = function () {

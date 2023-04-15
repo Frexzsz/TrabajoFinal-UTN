@@ -67,7 +67,7 @@ header {
   background-size: cover;
   background-position: center;
   height: 100px;
-  background: #121247be;
+  background: #000000d1;
   width: 100%;
 }
 .titulo{
@@ -84,6 +84,7 @@ header {
 #CheftP{
   display: flex;
   justify-content: center;
+  margin: 10px 0px;
 }
 .chefts{
   position: relative;
@@ -94,7 +95,7 @@ header {
 }
 .chefts:hover .capa{
   visibility: visible;
-  border: 1px solid #fefefe;
+  border: 1px solid #2f2b2b;
 }
 .chefts img{
   width: 380px;
@@ -118,6 +119,8 @@ header {
   justify-content: center;
   color: #fefefe;
   visibility: hidden;
+  font-family: cursive;
+  font-size: 30px;
 }
 
 /* Integrantes */
@@ -144,11 +147,12 @@ header {
 .contenido{
   width: 330px;
   height: 230px;
-  background: #10103f99;
+  background: #000000d1;
   padding: 1em;
   border-radius: 10%;
   margin: 0px 10px;
   color: #ffff;
+  font-family: 'Nunito', sans-serif;
 }
 
 /* Footer */
@@ -241,4 +245,21 @@ footer ul li a:hover {
   .nav-bar ul li a {
     margin-bottom: 12px;
   }
+
+  #CheftP{
+    flex-direction: column;
+  }
+  .CajaUno{
+    flex-direction: column;
+  }
+  .CajaDos{
+    flex-direction: column;
+  }
+  .CajaUno div{
+    margin-bottom: 10px;
+  }
+  .CajaDos div{
+    margin-bottom: 10px;
+  }
+
 }

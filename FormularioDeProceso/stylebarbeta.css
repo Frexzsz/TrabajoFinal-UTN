@@ -124,15 +124,15 @@ header {
   align-items: center;
 
 }
-.BoxFondoGris h2{
+/* .BoxFondoGris h2{
   width: 10%;
   margin-left: 2rem;
   color: #f1f1f1;
-}
+} */
 
 .BoxCenter{
   width: 100%;
-  height: 600px;
+  height: 700px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -149,21 +149,23 @@ header {
   display: grid;
   justify-content: center;
   align-items: center;
-  padding: 50px 20px 50px 20px;
+  padding: 30px 20px 50px 20px;
   grid-template-columns: 1fr;
   border: 1px solid black;
   border-radius: 20px;
   background-color: #f0f0f0;
 } 
 
-.TextUsuario{
-  margin-bottom: 10px;
+.TextTitulos{
+  margin-bottom: 20px;
   font-weight: 700;
+  font-size: 20px;
 }
 
-.FormularioLabel{
+.FormularioLabelText{
   display: block;
-  font-weight: 500;
+  font-weight: bold;
+  font-size: 15px;
   padding: 10px;
 }
 .FormularioInput{
@@ -181,6 +183,10 @@ header {
   outline: none;
 }
 
+.BoxButtom{
+  display: flex;
+  justify-content: flex-end;
+}
 .BoxButtom1{
   display: flex;
   justify-content: space-between;
@@ -201,14 +207,45 @@ header {
 .Comida{
   margin: 30px 0 0 0;
 }
+/*---------Resumen de Datos--------*/
+.BoxFormDatos{
+  padding: 30px 20px 50px 20px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: #f0f0f0;
+}
+.CajaDatoUsuario, .CajaServicioElegido{
+  display: flex;
+}
+.CajaDatoUsuario div p{
+  width: 230px;
+  border: 2px solid #3dca48;
+  padding: 5px;
+  margin: 0 5px 0 0;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+.CajaServicioElegido div p{
+  width: 230px;
+  border: 2px solid #3dca48;
+  padding: 5px;
+  margin: 0 5px 0 0;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+.TextServicios{
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 19px;
+}
 
 /*---------Barra de seguimiento por benja--------*/
 .caja{
   display: flex;
   justify-content: space-between;
-  width: 400px;
+  width: 500px;
   position: relative;
-  margin: 50px 0 50px 0;
+  margin: 0 10px 50px 0;
 }
 
 .paso{
@@ -252,13 +289,13 @@ header {
   border-radius: 20px;
 }
 .BoxCheckHijo{
-  width: 400px;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #c2c2c2;
+  background-color: #f0f0f0;
   border-radius: 20px;
 
 }
@@ -268,11 +305,11 @@ header {
 }
 .Check{
   background-color: #ffffff;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  border: 4px solid #c2c2c2;
-  font-size:1.5rem;
+  border: 6px solid #c2c2c2;
+  font-size: 80px;
   font-weight:bold;
   color: #e4e1e1;
   display: flex;

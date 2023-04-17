@@ -1,23 +1,45 @@
 /* Reset */
+:root {
+  --header-height: 3rem;
+  --navBar-Color: #FFF5E0;
+  --background-Blanco: #FFF5E0;
+  --primary: #11101b;
+  --white: #FFF5E0;
+  --description: #fefefe;
+  --navBar-Text-Color: #11101b;
+  --description: #11101b;
+}
+
+.dark-theme{
+  --navBar-Color: #11101b;
+  --background-Blanco: #11101b;
+  --bg: #11101b;
+  --primary: #ec994b;
+  --navBar-Text-Color: #FFF5E0;
+  --white: #11101b;
+  --description: #fefefe;
+}
+
 * {
   margin: 0;
   padding: 0;
   list-style: none;
   text-decoration: none;
+  font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
 }
 
 body {
-  /* background-image: url(https://i.imgur.com/ZUkMPnJ.jpg);
-  background-size: cover; */
-  background-color: #d69a39;
-  /* text-align: center; */
+  background-color: var(--background-Blanco);
+  color: var(--background-Blanco);
 }
 
 header {
   width: 100%;
   height: 80px;
-  background: #11101b;
+  background: var(--navBar-Color);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -27,10 +49,12 @@ header {
 .logo {
   font-size: 28px;
   font-weight: bold;
-  color: #fefefe;
+  color: var(--navBar-Text-Color);
 }
 
 .hamburger {
+  background-color: var(--navBar-Text-Color);
+  color: var(--navBar-Text-Color);
   display: none;
 }
 
@@ -40,36 +64,58 @@ header {
 
 .nav-bar ul li a {
   display: block;
-  color: #fefefe;
+  color: var(--navBar-Text-Color);
   font-size: 20px;
   padding: 10px 25px;
   border-radius: 50px;
   transition: 0.2s;
   margin: 0.5px;
-  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+}
+
+.toggle-btn {
+  background: var(--navBar-Text-Color);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-left: 10px;
+}
+
+.toggle-btn img {
+  color: var(--white);
+  width: 15px;
+  margin-left: 10px;
 }
 
 .nav-bar ul li a:hover {
-  color: #11101b;
-  background: #fefefe;
+  color: var(--navBar-Color);
+  background: var(--navBar-Text-Color);
+  transform: scale(1.05) !important;
 }
 
-.nav-bar ul li a.nosotros {
-  color: #11101b;
-  background: #fefefe;
+.nav-bar ul li a.active {
+  color: var(--navBar-Color);
+  background: var(--navBar-Text-Color);
 }
-.logo img {
-  width: 85px;
-  height: 90%;
+
+.nav-bar .toggle-btn:hover {
+  transform: scale(1.05) !important;
+}
+
+.nav-bar .toggle-btn.active {
+  color: var(--navBar-Color);
+  background: var(--background-Blanco);
 }
 
 /* Banner */
 #banner {
   padding: 0 50px;
-  /* background-image: url(https://i.imgur.com/CAUO0KC.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; */
   height: 200px;
   background: #000000d2;
   width: 100%;
@@ -86,8 +132,6 @@ header {
 
 /* Caja de chef */
  #ChefP {
-  /* display: flex; */
-  /* justify-content: center; */
   margin: 30px 80px;
   background-color: #00000075;
   border-radius: 15px;
@@ -122,43 +166,6 @@ header {
   padding-top: 5px;
   color: #cec6bb;
 }
-/*
-.chefs {
-  position: relative;
-  width: 380px;
-  height: 300px;
-  cursor: pointer;
-  overflow: hidden;
-} */
-/* .chefs:hover .capa {
-  visibility: visible;
-  border: 1px solid #2f2b2b;
-} */
-/* .chefs img {
-  width: 380px;
-  height: 300px;
-  object-fit: cover;
-  transition: 0.5s ease;
-  padding: 15px;
-}
-.chefs:hover img {
-  transform: scale(1.1);
-} */
-/* .capa {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #10103f99;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fefefe;
-  visibility: hidden;
-  font-family: cursive;
-  font-size: 30px;
-} */
 
 /* Integrantes */
 #personas img {
@@ -230,6 +237,13 @@ footer ul li a:hover {
   color: #11101b;
 }
 
+@media screen and (min-width: 768px){
+  :root{
+    --big-font-size: 5rem;
+    --normal-font-size: 1rem;
+  }
+}
+
 @media only screen and (max-width: 1320px) {
   header {
     padding: 0 50px;
@@ -256,17 +270,17 @@ footer ul li a:hover {
   .hamburger .line {
     width: 30px;
     height: 3px;
-    background: #fefefe;
+    background: var(--background-Blanco);
     margin: 6px 0;
   }
   .nav-bar {
     height: 0;
-    position: absolute;
+    position: absolute !important;
     top: 80px;
     left: 0;
     right: 0;
     width: 100vw;
-    background: #11101b;
+    background: var(--navBar-Color);
     transition: 0.5s;
     overflow: hidden;
     z-index: 100;
@@ -284,7 +298,7 @@ footer ul li a:hover {
   }
   .nav-bar.active ul {
     opacity: 1;
-    color: #fefefe;
+    color: var(--background-Blanco);
   }
   .nav-bar ul li a {
     margin-bottom: 12px;

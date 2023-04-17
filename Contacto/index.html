@@ -33,7 +33,7 @@
         <nav class="nav-bar">
             <ul>
                 <li>
-                    <a href="/Home/home.html">Home</a>
+                    <a href="../home.html">Home</a>
                 </li>
                 <li>
                     <a href="#" class="active">Contacto</a>
@@ -50,24 +50,26 @@
 
     <!-- ======================== form ====================== -->
    
-    <div class="contact container text-center my-5  p-5">
-        <h1>logo</h1>
+    <div class="contact container text-center my-5  pt-5 px-5 rounded-5">
+        <h1>Catering Company</h1>
         <div class="row">
             <div class="form col-6  text-start  my-5 py-5">
-                <div class="mb-5 mx-5 ">
-                    <label for="imp1" class="form-label">Nombre</label>
-                    <input type="text" id="imp1">
+                <div class="oracion1 mb-5 mx-5">
+                    <h3>Esperamos su consulta</h3>
                 </div>
-                <div class="mb-5 mx-5">
-                    <label for="imp2" class="form-label">Apellido</label>
-                    <input type="text"  id="imp2">
+                <div class="validacion my-5 mx-5">
+                    <p>* Campos obligatorios </p>
+                </div>
+                <div class="mb-5 mx-5 ">
+                    <label for="imp1" class="form-label">Nombre *</label>
+                    <input type="text" id="imp1">
                 </div>
                 <div class="mb-5 mx-5">
                     <label for="imp3" class="form-label">Teléfono</label>
                     <input type="number"  id="imp3">
                 </div>
                 <div class="mb-5 mx-5">
-                    <label for="imp4" class="form-label">Email</label>
+                    <label for="imp4" class="form-label">Email *</label>
                     <input type="email"  id="imp4">
                 </div>
                 <div class="mb-5 mx-5">
@@ -78,35 +80,40 @@
                     <label for="txa" class="form-label">Mensaje</label>
                     <textarea  id="txa" rows="3"></textarea>
                 </div>
-                <div class="d-grid gap-2 px-5 my-3">
-                    <button class="btn btn-outline-light" type="button">Button</button>
+                <div class="d-grid gap-2 px-5 mt-5">
+                    <button class="btn btn-outline-light" type="button">Enviar</button>
                 </div>
+                
             </div>
             <!-- ---------------------------contacto------------------- -->
-            <div class="contacto col-6 d-flex  flex-column my-5 pt-5 text-center" id="datos">
+            <div class="contacto col-6 d-flex  flex-column my-5  py-5 text-center" id="datos">
                 <h2>contactanos</h2>
                 <div class="contacto my-4 mx-2">
                     <div class="phone d-flex align-items-baseline my-2">
                         <i class="bi bi-telephone mx-3"></i>
-                        <p>2255-405669</p>
+                        <p>11 3331-7310</p>
                     </div>
                     <div class="email d-flex align-items-baseline my-2">
                         <i class="bi bi-envelope-at mx-3"></i>
-                        <p>name@gmail</p>
+                        <p>cateringcompany@gmail</p>
                     </div>
                     <div class="ubicacion d-flex align-items-baseline ">
                         <i class="bi bi-geo-alt-fill mx-3"></i>
-                        <p>Mitre 1718</p>
+                        <p> Corrientes 1560</p>
                     </div>
                 </div>
                 <!-- ---------------mapa (API)---------- -->
-                <div class="mapa text-center mb-3">
-                    <p>aqui va el mapa (API)</p>
+                <div class="mapa text-center mb-3 mx-3">
+    
+                    <div id="map"></div>
+                    <script src="index.js"></script>
+                    <script
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
                 </div>
                 <!-- ----------------redes sociales------------ -->
                 <div class="redes text-center">
                     <p>Redes sociales </p>
-                    <div class="logos d-flex justify-content-center ">
+                    <div class="logos d-flex justify-content-center">
                         <a href="#"><i class="bi bi-facebook mx-3"></i></i> </a>
                         
                         <a href="#"><i class="bi bi-twitter mx-2"></i></i> </a>

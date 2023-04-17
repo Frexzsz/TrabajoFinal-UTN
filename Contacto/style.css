@@ -168,7 +168,7 @@ header {
 
 .mapa{
     background-color: #15077c;
-    height: 160px; 
+    height: 460px; 
 }
 .contacto p{
     font-size: 18px;
@@ -180,4 +180,15 @@ header {
 .logos i:hover {
     font-size: 28px;
     color:#fefefe;
+}
+#map {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.oracion1 h3{
+    color: #9287eb;
+}
+.validacion p{
+    color:#fefefe
 }

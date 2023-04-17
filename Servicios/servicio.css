@@ -179,6 +179,11 @@ align-items: center;
 
 }
 
+.h1titulo{
+  color: #000;
+  text-align: center;
+}
+
 footer{
   position: relative;
   bottom: 0;

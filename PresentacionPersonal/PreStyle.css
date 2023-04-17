@@ -99,7 +99,7 @@ header {
   transform: scale(1.05) !important;
 }
 
-.nav-bar ul li a.active {
+.nav-bar ul li a.nosotros {
   color: var(--navBar-Color);
   background: var(--navBar-Text-Color);
 }
@@ -108,7 +108,7 @@ header {
   transform: scale(1.05) !important;
 }
 
-.nav-bar .toggle-btn.active {
+.nav-bar .toggle-btn.nosotros {
   color: var(--navBar-Color);
   background: var(--background-Blanco);
 }
@@ -285,7 +285,7 @@ footer ul li a:hover {
     overflow: hidden;
     z-index: 100;
   }
-  .nav-bar.active {
+  .nav-bar.nosotros {
     height: 450px;
   }
   .nav-bar ul {
@@ -296,7 +296,7 @@ footer ul li a:hover {
     transition: 0.6s;
     opacity: 0;
   }
-  .nav-bar.active ul {
+  .nav-bar.nosotros ul {
     opacity: 1;
     color: var(--background-Blanco);
   }

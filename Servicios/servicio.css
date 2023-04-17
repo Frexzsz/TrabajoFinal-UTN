@@ -135,7 +135,7 @@ align-items: center;
 .card{
   width: 275px;
   height: 500;
-  border: 3px solid gray;
+  border: 3px solid rgb(0, 0, 0);
   margin: 50px;
   border-radius: 10px;
   padding: 10px;
@@ -152,20 +152,21 @@ align-items: center;
   height: 240px;
 }
 .card-title{
-  width: 240px;
+  width: 242px;
   font-size:17px;
   font-weight: 800;
-  margin: 5px 5px 5px 5px;
-  color: #11101b;
+  margin: 5px 0 5px 5px;
+  color: #000000;
   letter-spacing: 4px;
   text-align: center;
 }
 .card-text{
   width: 98%;
   height: 150px;
-  color: #11101b;
+  color: #000000;
   text-indent: 10px;
   text-align: center;
+  opacity: 1;
 }
 .boton-contratarPadre{
   display: flex;
@@ -184,8 +185,9 @@ align-items: center;
 .h1titulo{
   color: #000;
   text-align: center;
-  background: var(--navBar-Color);
   color: var(--navBar-Text-Color);
+  background: var(--navBar-Color);
+  height: 30px;
 }
 
 footer{

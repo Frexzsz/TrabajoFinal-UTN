@@ -7,3 +7,18 @@ window.addEventListener("load", function () {
     navBar.classList.toggle("active");
   };
 });
+
+// Scroll reveal Animation //
+
+window.addEventListener('load', function() {
+  const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 3000,
+    delay: 100,
+  })
+
+  sr.reveal('catering')
+  sr.reveal('.home__data', {origin: 'bottom'})
+  sr.reveal('.home__img', {origin: 'left', delay: 100})
+});

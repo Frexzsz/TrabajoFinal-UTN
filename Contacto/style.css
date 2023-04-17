@@ -10,6 +10,7 @@
   
 }
 
+
 body {
   background-color: #fefefe;
 background-image: url(https:marius-bernard.fr/wp-content/uploads/2016/05/home-header.jpg);
@@ -30,7 +31,7 @@ header {
 .logo {
     font-size: 28px;
     font-weight: bold;
-    color: #fefefe;
+    color: #fefefe ; 
 }
 
 .hamburger {
@@ -53,12 +54,12 @@ header {
 
 .nav-bar ul li a:hover {
     color: #11101b;
-    background: #fefefe;
+    background: #fefefe ;
 }
 
 .nav-bar ul li a.active {
-    color: #11101b;
-    background: #fefefe;
+    color: #11101b ;
+    background: #fefefe ;
 }
 
 @media only screen and (max-width: 1320px) {
@@ -139,7 +140,7 @@ header {
 .form input, 
 .form textarea{
     width: 100%;
-
+    resize: none;
     background: none;
     border: none;
     border-bottom: 1px solid #9287eb;

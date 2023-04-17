@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="homeStyle.css" />
     <!--=ScriptJS=-->
     <script src="scriptHome.js"></script>
-    <!--==Icons=-->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!--=Animaciones=-->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="scrollreveal.min.js"></script>
@@ -37,9 +35,16 @@
           <li>
             <a href="/Sobre Nosotros/sobreNosotros.html">Sobre Nosotros</a>
           </li>
+          <!--Dark/light mode-->
+          <div class="toggle-btn" id="btn">
+            <span id="btnText">Dark</span>
+            <img src="ImagenesDelHome/Moon.png" alt="Moon" id="btnIcon">
+          </div>
+          <!--Dark/light mode terminado-->
         </ul>
       </nav>
     </header>
+    <!--Home-->
     <section class="home">
       <div class="home__container">
         <div class="home__data">
@@ -52,5 +57,14 @@
         </div>
       </div>
     </section>
+    <footer>
+      <div class="footer-content">
+        <h3>Catering Company</h3>
+        <p>Catering Company es una marca de catering de alta calidad que se dedica a proporcionar servicios excepcionales y personalizados a clientes en toda Argentina.
+      </div>
+      <div class="footer-bottom">
+        <p>copyright &copy;2023 Catering Company. designed by <span>programming students</span></p>
+      </div>
+    </footer>
   </body>
 </html>

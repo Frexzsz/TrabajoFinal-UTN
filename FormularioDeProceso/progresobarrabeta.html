@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>la formulario multipaso</title>
+    <link rel="stylesheet" href="stylebarbeta.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="/FormularioDeProceso//hamburguesa/hamburguesa.js"></script>
+    <script src="/FormularioDeProceso/wizardJquery/wizardJquery.js"></script>
+    <script src="/FormularioDeProceso/formularioValidacion.js"></script>
+  </head>
+  <body>
+    <!------------------- Navbar por mateo----------------->
+    <header>
+      <div class="logo">Catering</div>
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <nav class="nav-bar">
+        <ul>
+          <li>
+            <a href="#" class="active">Home</a>
+          </li>
+          <li>
+            <a href="/Contacto/contacto.html">Contacto</a>
+          </li>
+          <li>
+            <a href="/Servicios/servicio.html">Servicios</a>
+          </li>
+          <li>
+            <a href="/Sobre Nosotros/sobreNosotros.html">Sobre Nosotros</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!--------------- barra formulario ----------------->
+  	<!-- <div class="Boxblock">
+      <div class="BoxFondoGris">
+        <h2>Formulario</h2>
+      </div>
+    </div> -->
+    <!---------------- formulario ----------------->
+    <div class="BoxCenter">
+      <div class="boxFormulario">
+        <div class="BoxCirculo">
+          <div class="caja">
+            <span class="paso activo">1</span>
+            <span class="paso paso2">2</span>
+            <span class="paso paso3">3</span>
+            <span class="paso paso4">4</span>
+            <div class="barra">
+              <span class="progreso"></span>
+            </div>
+          </div>
+        </div>
+        <!---------------- formularioUsuario ----------------->
+        <div>
+          <form class="BoxForm" id="Usuario">
+            <legend class="TextTitulos">Datos de Usuario</legend>
+            <label for="nombre" class="FormularioLabelText">Nombre:</label>
+            <input
+              type="text"
+              name="nombre"
+              id="nombre"
+              class="FormularioInput"
+            />
+            <label for="apellido" class="FormularioLabelText">Apellido:</label>
+            <input
+              type="text"
+              name="apellido"
+              id="apellido"
+              class="FormularioInput"
+            />
+            <label for="telefono" class="FormularioLabelText">Telefono:</label>
+            <input
+              type="text"
+              name="telefono"
+              id="telefono"
+              class="FormularioInput"
+            />
+            <label for="correo" class="FormularioLabelText">Correo:</label>
+            <input
+              type="text"
+              name="correo"
+              id="correo"
+              class="FormularioInput"
+            />
+          </form>
+          <div class="BoxButtom">
+            <button class="btn_siguiente-1 styleSiguiente" id="btn1" onClick="datoUsuario()">
+              Siguiente
+            </button>
+          </div>
+        </div>
+        <!---------------- formulario Servicio----------------->
+        <div hidden="" id="Servicio">
+          <form class="BoxForm">
+            <legend class="TextTitulos">Servicio</legend>
+            <label for="servicio" class="FormularioLabelText"
+              >Elegir Servicio:</label>
+            <select class="FormularioInput" id="servicioSelect">
+              <option>Servicio de Empresa</option>
+              <option>Servicio de Fiesta</option>
+              <option style="display: none" selected></option>
+            </select>
+            <label for="fecha" class="FormularioLabelText">Fecha:</label>
+            <input type="date" name="" id="fecha" class="FormularioInput" />
+            <label for="comida" class="FormularioLabelText">Comida:</label>
+            <textarea id="comentarioComida"></textarea>
+            <select name="comida" id="comida" class="FormularioInput Comida">
+              <option>arroz</option>
+              <option>fidio</option>
+              <option>lenteja</option>
+              <option>polenta</option>
+              <option>mortadela (solo premium)</option>
+            </select>
+          </form>
+          <div class="BoxButtom1">
+            <button class="btn_atras-1 styleAtras" id="btn-Back1">Atras</button>
+            <button class="btn_siguiente-2 styleSiguiente" id="btn1" onClick="datoUsuario()">
+              Siguiente
+            </button>
+          </div>
+        </div>
+        <!---------------- formulario Confirmacion ----------------->
+        <div hidden="" id="Confirmacion">
+          <div class="BoxFormDatos">
+            <div class="TextTitulos">
+              <p>Tus Datos</p>
+            </div>
+            <div class="CajaDatoUsuario">
+              <div>
+                <label for="nombre" class="FormularioLabelText">Nombre:</label>
+                <div class="BoxNombre">
+                  <p id="resultadoNombre"> </p>
+                </div>
+                <label for="apellido" class="FormularioLabelText">Apellido:</label>
+                <div>
+                  <p id="resultadoApellido"> </p>
+                </div>
+              </div>
+              <div>
+                <label for="telefono" class="FormularioLabelText">Telefono:</label>
+                <div>
+                  <p id="resultadoTelefono"> </p>
+                </div>
+                <label for="correo" class="FormularioLabelText">Correo:</label>
+                <div>
+                  <p id="resultadoCorreo"> </p>
+                </div>
+              </div>
+            </div>
+            <div class="TextServicios">
+              <p>Servicios</p>
+            </div>
+            <div class="CajaServicioElegido">
+              <div>
+                <label class="FormularioLabelText">Servicio elegido:</label>
+                <div>
+                  <p id="resultadoServicio"> </p>
+                </div>
+                <label class="FormularioLabelText">Fecha del evento:</label>
+                <div>
+                  <p id="resultadoFecha"> </p>
+                </div>
+              </div>
+              <div>
+                <label for="nombre" class="FormularioLabelText">Comida personalizada:</label>
+                <div>
+                  <p id="resultadoComentario"> </p>
+                </div>
+                <label for="nombre" class="FormularioLabelText">Comida seleccionada:</label>
+                <div>
+                  <p id="resultadoComidaElegida"> </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="BoxButtom1">
+            <button class="btn_atras-1 styleAtras" id="btn-Back2">Atras</button>
+            <button class="btn_finalizar" id="btn3">Finalizar</button>
+          </div>
+        </div>
+        <!---------------- Final/Agradecimiento----------------->
+        <div class="boxCheck" hidden="" id="Check">
+          <div class="BoxCheckHijo">
+            <div class="TextoCheck">
+              <span>¡Gracias por contratarnos!</span>
+            </div>
+            <span class="Check paso4"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

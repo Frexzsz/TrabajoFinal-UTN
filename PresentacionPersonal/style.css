@@ -1,0 +1,265 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(https://i.imgur.com/ZUkMPnJ.jpg);
+  text-align: center;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  background: #11101b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fefefe;
+}
+
+.hamburger {
+  display: none;
+}
+
+.nav-bar ul {
+  display: flex;
+}
+
+.nav-bar ul li a {
+  display: block;
+  color: #fefefe;
+  font-size: 20px;
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: 0.2s;
+  margin: 0.5px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.nav-bar ul li a:hover {
+  color: #11101b;
+  background: #fefefe;
+}
+
+.nav-bar ul li a.nosotros {
+  color: #11101b;
+  background: #fefefe;
+}
+.logo img{
+  width: 85px;
+  height: 90%;
+}
+
+/* Banner */
+#banner{
+  padding: 0 50px;
+  background-size: cover;
+  background-position: center;
+  height: 100px;
+  background: #000000d1;
+  width: 100%;
+}
+.titulo{
+  font-size: 30px;
+  color: #ffffff;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-family: 'Nunito', sans-serif;
+}
+
+
+/* Caja de cheft */
+#CheftP{
+  display: flex;
+  justify-content: center;
+  margin: 10px 0px;
+}
+.chefts{
+  position: relative;
+  width: 380px;
+  height: 300px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.chefts:hover .capa{
+  visibility: visible;
+  border: 1px solid #2f2b2b;
+}
+.chefts img{
+  width: 380px;
+  height: 300px;
+  object-fit: cover;
+  transition: 0.5s ease;
+  padding: 15px;
+}
+.chefts:hover img{
+  transform: scale(1.1);
+}
+.capa{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #10103f99;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fefefe;
+  visibility: hidden;
+  font-family: cursive;
+  font-size: 30px;
+}
+
+/* Integrantes */
+#personas img{
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+}
+
+.CajaUno{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.CajaDos {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.contenido{
+  width: 330px;
+  height: 230px;
+  background: #000000d1;
+  padding: 1em;
+  border-radius: 10%;
+  margin: 0px 10px;
+  color: #ffff;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Footer */
+footer {
+  background-color: #11101b;
+  padding: 20px 0;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  color: #fff;
+  padding: 10px 0px;
+  font-family: "Montserrat", sans-serif;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li {
+  display: inline-block;
+}
+
+footer ul li a {
+  color: #fefefe;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+footer ul li a:hover {
+  background-color: #fefefe;
+  color: #11101b;
+}
+
+@media only screen and (max-width: 1320px) {
+  header {
+    padding: 0 50px;
+  }
+}
+
+@media only screen and (max-width: 1110px) {
+  header {
+    padding: 0 30px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  .hamburger .line {
+    width: 30px;
+    height: 3px;
+    background: #fefefe;
+    margin: 6px 0;
+  }
+  .nav-bar {
+    height: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: #11101b;
+    transition: 0.5s;
+    overflow: hidden;
+    z-index: 100;
+  }
+  .nav-bar.active {
+    height: 450px;
+  }
+  .nav-bar ul {
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    transition: 0.6s;
+    opacity: 0;
+  }
+  .nav-bar.active ul {
+    opacity: 1;
+    color: #fefefe;
+  }
+  .nav-bar ul li a {
+    margin-bottom: 12px;
+  }
+
+  #CheftP{
+    flex-direction: column;
+  }
+  .CajaUno{
+    flex-direction: column;
+  }
+  .CajaDos{
+    flex-direction: column;
+  }
+  .CajaUno div{
+    margin-bottom: 10px;
+  }
+  .CajaDos div{
+    margin-bottom: 10px;
+  }
+
+}

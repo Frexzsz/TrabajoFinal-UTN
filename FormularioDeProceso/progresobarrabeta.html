@@ -5,9 +5,9 @@
     <title>la formulario multipaso</title>
     <link rel="stylesheet" href="stylebarbeta.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js" integrity="sha512-ToRWKKOvhBSS8EtqSflysM/S7v9bB9V0X3B1+E7xo7XZBEZCPL3VX5SFIp8zxY19r7Sz0svqQVbAOx+QcLQSAQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/FormularioDeProceso//hamburguesa/hamburguesa.js"></script>
     <script src="/FormularioDeProceso/wizardJquery/wizardJquery.js"></script>
-    <script src="/FormularioDeProceso/formularioValidacion.js"></script>
   </head>
   <body>
     <!------------------- Navbar por mateo----------------->
@@ -58,7 +58,6 @@
         <!---------------- formularioUsuario ----------------->
         <div>
           <form class="BoxForm" id="Usuario">
-            <legend class="TextTitulos">Datos de Usuario</legend>
             <label for="nombre" class="FormularioLabelText">Nombre:</label>
             <input
               type="text"
@@ -97,7 +96,6 @@
         <!---------------- formulario Servicio----------------->
         <div hidden="" id="Servicio">
           <form class="BoxForm">
-            <legend class="TextTitulos">Servicio</legend>
             <label for="servicio" class="FormularioLabelText"
               >Elegir Servicio:</label>
             <select class="FormularioInput" id="servicioSelect">
@@ -190,6 +188,7 @@
               <span>¡Gracias por contratarnos!</span>
             </div>
             <span class="Check paso4"></span>
+            <button onclick="convertirpdf()">bajar pdf</button>
           </div>
         </div>
       </div>

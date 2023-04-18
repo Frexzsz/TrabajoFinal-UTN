@@ -124,7 +124,6 @@ header {
   display: grid;
   align-items: center;
   justify-content: center;
-  background-color: #FFF5E0;
 }
 .BoxSecundario{
   width: 100%;
@@ -204,7 +203,7 @@ header {
 /*---------Resumen de Datos--------*/
 .BoxFormDatos{
   width: 500px;
-  height: 400px;
+  height: 440px;
   padding: 30px 20px 50px 20px;
   border: 1px solid black;
   border-radius: 20px;
@@ -220,19 +219,22 @@ header {
   margin: 0 5px 0 0;
   border-radius: 5px;
   background-color: #ffffff;
+  color: #8b8989;
 }
 .CajaServicioElegido div p{
   width: 230px;
   border: 2px solid #3dca48;
-  padding: 5px;
+  padding: 4px;
   margin: 0 5px 0 0;
   border-radius: 5px;
   background-color: #ffffff;
+  color: #8b8989;
 }
 .TextServicios{
   margin-top: 20px;
   font-weight: 700;
   font-size: 19px;
+  color: #000;
 }
 
 /*---------Barra de seguimiento por benja--------*/

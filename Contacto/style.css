@@ -34,7 +34,7 @@
 }
 
 
-body {
+body, section {
    
     background-color: var(--background-Blanco);
     color: var(--background-Blanco);
@@ -175,7 +175,9 @@ header {
         margin-bottom: 12px;
     }
 }
-
+section{
+    padding-top: 50px;
+}
 /* ============== form================ */
 .contact {
     background-color: #000000d1;

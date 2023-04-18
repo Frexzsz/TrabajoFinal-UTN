@@ -36,8 +36,8 @@
 
 body {
    
-    background-color: var(--background-Blanco);
-    color: var(--background-Blanco);
+    background-color: var(--background-Blanco) !important ;
+    color: var(--background-Blanco)!important;
 }
 
 header {
@@ -178,7 +178,8 @@ header {
 
 /* ============== form================ */
 .contact {
-    background-color: #000000d1;
+    background-color: #000000b3;
+    
 }
 
 .contact h1 {
@@ -186,7 +187,8 @@ header {
 }
 
 .form {
-    background-color: #2f2b2b;
+    background-color: #292424;
+    
 }
 
 .form label {

@@ -10,6 +10,7 @@
   
 }
 
+
 body {
   background-color: #fefefe;
 background-image: url(https:marius-bernard.fr/wp-content/uploads/2016/05/home-header.jpg);
@@ -30,7 +31,7 @@ header {
 .logo {
     font-size: 28px;
     font-weight: bold;
-    color: #fefefe;
+    color: #fefefe ; 
 }
 
 .hamburger {
@@ -53,12 +54,12 @@ header {
 
 .nav-bar ul li a:hover {
     color: #11101b;
-    background: #fefefe;
+    background: #fefefe ;
 }
 
 .nav-bar ul li a.active {
-    color: #11101b;
-    background: #fefefe;
+    color: #11101b ;
+    background: #fefefe ;
 }
 
 @media only screen and (max-width: 1320px) {
@@ -139,13 +140,17 @@ header {
 .form input, 
 .form textarea{
     width: 100%;
-
-    background: none;
+    resize: none;
+    background: none !important;
     border: none;
     border-bottom: 1px solid #9287eb;
-    outline: 0;
-    color: #fefefe;
+    outline:0 !important;
+    color: #fefefe !important;
 }
+#imp1{
+    outline: none;
+}
+
 .form button{
     color: #9287eb;
     font-size: 20px
@@ -178,8 +183,9 @@ header {
     color:#9287eb;
 }
 .logos i:hover {
-    font-size: 28px;
+    
     color:#fefefe;
+    
 }
 #map {
     height: 100%;
@@ -192,3 +198,9 @@ header {
 .validacion p{
     color:#fefefe
 }
+
+#textof{
+    color: #08df25;
+    font-size: 25px;
+}
+

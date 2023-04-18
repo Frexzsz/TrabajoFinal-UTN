@@ -26,18 +26,18 @@ window.addEventListener("load", function () {
 // Dark Mode / Light mode //
 
 window.addEventListener("load", function () {
-let btn = document.getElementById("btn");
-let btnText = document.getElementById("btnText");
-let btnIcon = document.getElementById("btnIcon");
-btn.onclick = function () {
-  document.body.classList.toggle("dark-theme");
-  
-  if(document.body.classList.contains("dark-theme")){
-    btnIcon.src = "imagenesDelHome/Sun.png"
-    btnText.innerHTML = "Light";
-  }else{
-    btnIcon.src = "imagenesDelHome/Moon.png"
-    btnText.innerHTML = "Dark";
-  }
-}
-})
+  let btn = document.getElementById("btn");
+  let btnText = document.getElementById("btnText");
+  let btnIcon = document.getElementById("btnIcon");
+  btn.onclick = function () {
+    document.body.classList.toggle("dark-theme");
+
+    if (document.body.classList.contains("dark-theme")) {
+      btnIcon.src = "imagenesDelHome/Sun.png";
+      btnText.innerHTML = "Light";
+    } else {
+      btnIcon.src = "imagenesDelHome/Moon.png";
+      btnText.innerHTML = "Dark";
+    }
+  };
+});

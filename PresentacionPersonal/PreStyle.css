@@ -121,6 +121,7 @@ header {
   width: 100%;
 }
 .titulo {
+  text-shadow: 0px 8px 12px rgba(0,0,0,0.6);
   font-size: 30px;
   color: #ffffff;
   height: 100%;
@@ -168,10 +169,23 @@ header {
 }
 
 /* Integrantes */
+#personas{
+  margin: 30px 80px;
+  background-color: #00000075;
+  border-radius: 15px;
+  padding: 8px;
+}
 #personas img {
   width: 100px;
   height: 100px;
   border-radius: 100%;
+}
+.titulopersonas h1{
+  text-shadow: 0px 8px 12px rgba(0,0,0,0.6);
+  text-align: center;
+  color: #FFF5E0;
+  padding: 25px;
+  font-size: 30px;
 }
 
 .CajaUno {
@@ -318,5 +332,6 @@ footer ul li a:hover {
   .contenido {
     flex-direction: column;
     margin: 10px;
+    align-items: center;
   }
 }

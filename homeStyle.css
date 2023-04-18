@@ -182,7 +182,7 @@ footer {
   right: 0;
   background: var(--navBar-Color);
   height: auto;
-  width: 100vw;
+  width: 100%;
   padding-top: 40px;
   color: var(--navBar-Text-Color);
 }

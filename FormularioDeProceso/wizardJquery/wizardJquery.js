@@ -57,8 +57,6 @@ $("document").ready(function () {
       
     })
 
-    
-
     $(".btn_finalizar").click(function () {
       $(".paso4").css({ "border-color": "#08FF00", color: "#08FF00" });
       $(".progreso").css({ background: "#08FF00", width: "90%" });
@@ -77,7 +75,7 @@ $("document").ready(function () {
     });
   });
 
-  /*------- validacion --------*/
+  /*------- Mostrar datos al usuario (paso3) --------*/
   const datoUsuario = () => {
     let nombreUsuario = document.getElementById("nombre").value;
     let apellidoUsuario = document.getElementById("apellido").value;
@@ -85,8 +83,6 @@ $("document").ready(function () {
     let correoUsuario = document.getElementById("correo").value;
     let servicioElegido = document.getElementById("servicioSelect").value;
     let fechaElegido = document.getElementById("fecha").value;
-    let comentarioComida = document.getElementById("comentarioComida").value;
-    let comidaElegida = document.getElementById("comida").value;
 
     document.getElementById("resultadoNombre").innerHTML = nombreUsuario
     document.getElementById("resultadoApellido").innerHTML = apellidoUsuario
@@ -94,8 +90,6 @@ $("document").ready(function () {
     document.getElementById("resultadoCorreo").innerHTML = correoUsuario
     document.getElementById("resultadoServicio").innerHTML = servicioElegido
     document.getElementById("resultadoFecha").innerHTML = fechaElegido
-    document.getElementById("resultadoComentario").innerHTML = comentarioComida
-    document.getElementById("resultadoComidaElegida").innerHTML = comidaElegida
 };
 console.log(datoUsuario);
 
@@ -109,8 +103,6 @@ function convertirpdf(){
 
   let convpaquete = document.getElementById("servicioSelect").value;
   let convfecha = document.getElementById("fecha").value;
-  let convcomidatextarea = document.getElementById("comentarioComida").value;
-  let convcomida = document.getElementById("comida").value;
 
   const doc = new jsPDF();
     doc.fromHTML(convnombre, 10, 10);
@@ -120,8 +112,6 @@ function convertirpdf(){
 
     doc.fromHTML(convpaquete, 10, 35);
     doc.fromHTML(convfecha, 10, 40);
-    doc.fromHTML(convcomidatextarea, 10, 45);
-    doc.fromHTML(convcomida, 10, 50);
 
     doc.save("Caterin Contrato");
 };

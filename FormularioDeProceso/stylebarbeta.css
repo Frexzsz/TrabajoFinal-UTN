@@ -1,4 +1,30 @@
 /*------navbar(hecho por mateo)-------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+
+/* Desde acá empieza las variables y el NavBar */
+
+:root {
+  --header-height: 3rem;
+  --navBar-Color: #FFF5E0;
+  --background-Blanco: #FFF5E0;
+  --primary: #11101b;
+  --white: #FFF5E0;
+  --description: #fefefe;
+  --navBar-Text-Color: #11101b;
+  --description: #11101b;
+}
+
+.dark-theme{
+  --navBar-Color: #11101b;
+  --background-Blanco: #11101b;
+  --bg: #11101b;
+  --primary: #ec994b;
+  --navBar-Text-Color: #FFF5E0;
+  --white: #11101b;
+  --description: #fefefe;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,15 +32,13 @@
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
-}
-
-:root {
-  --navBar-Color: #11101b;
-  --background-Blanco: #fefefe;
+  list-style-type: none;
+  text-decoration: none;
 }
 
 body {
-  background-color: #fefefe;
+  background-color: var(--background-Blanco);
+  color: var(--background-Blanco);
 }
 
 header {
@@ -30,10 +54,12 @@ header {
 .logo {
   font-size: 28px;
   font-weight: bold;
-  color: var(--background-Blanco);
+  color: var(--navBar-Text-Color);
 }
 
 .hamburger {
+  background-color: var(--navBar-Text-Color);
+  color: var(--navBar-Text-Color);
   display: none;
 }
 
@@ -43,113 +69,76 @@ header {
 
 .nav-bar ul li a {
   display: block;
-  color: var(--background-Blanco);
+  color: var(--navBar-Text-Color);
   font-size: 20px;
   padding: 10px 25px;
   border-radius: 50px;
   transition: 0.2s;
   margin: 0.5px;
+  text-decoration: none;
+}
+
+.toggle-btn {
+  background: var(--navBar-Text-Color);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-left: 10px;
+}
+
+.toggle-btn img {
+  color: var(--white);
+  width: 15px;
+  margin-left: 10px;
 }
 
 .nav-bar ul li a:hover {
   color: var(--navBar-Color);
-  background: var(--background-Blanco);
+  background: var(--navBar-Text-Color);
+  transform: scale(1.05) !important;
 }
 
 .nav-bar ul li a.active {
   color: var(--navBar-Color);
+  background: var(--navBar-Text-Color);
+}
+
+.nav-bar .toggle-btn:hover {
+  transform: scale(1.05) !important;
+}
+
+.nav-bar .toggle-btn.active {
+  color: var(--navBar-Color);
   background: var(--background-Blanco);
 }
 
-@media only screen and (max-width: 1320px) {
-  header {
-    padding: 0 50px;
-  }
-}
-
-@media only screen and (max-width: 1110px) {
-  header {
-    padding: 0 30px;
-  }
-}
-
-@media only screen and (max-width: 900px) {
-  .hamburger {
-    display: block;
-    cursor: pointer;
-  }
-  .hamburger .line {
-    width: 30px;
-    height: 3px;
-    background: var(--background-Blanco);
-    margin: 6px 0;
-  }
-  .nav-bar {
-    height: 0;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    right: 0;
-    width: 100vw;
-    background: var(--navBar-Color);
-    transition: 0.5s;
-    overflow: hidden;
-  }
-  .nav-bar.active {
-    height: 450px;
-  }
-  .nav-bar ul {
-    display: block;
-    width: fit-content;
-    margin: 80px auto 0 auto;
-    text-align: center;
-    transition: 0.6s;
-    opacity: 0;
-  }
-  .nav-bar.active ul {
-    opacity: 1;
-    color: var(--background-Blanco);
-  }
-  .nav-bar ul li a {
-    margin-bottom: 12px;
-  }
-}
-
-/*---------Barra fondo Color Titulo Formulario(h2)--------*/
-.Boxblock{
-  width: 100%;
-  height: 100px;
-  background-color: #3d3c3c;
-  display: flex;
-  align-items: center;
-
-}
-/* .BoxFondoGris h2{
-  width: 10%;
-  margin-left: 2rem;
-  color: #f1f1f1;
-} */
-
 .BoxCenter{
   width: 100%;
-  height: 700px;
-  display: flex;
+  height: 100vh;
+  display: grid;
   align-items: center;
   justify-content: center;
-  background-color: #535252;
+}
+.BoxSecundario{
+  width: 100%;
+  height: 550px;
 }
 
-.BoxCirculos{
-   display: flex;
-   align-items: center;
-   justify-content: center;
-}
 /*---------boxFormularioWizard--------*/
+
 .BoxForm{
+  width: 500px;
+  height: 400px;
   display: grid;
   justify-content: center;
   align-items: center;
-  padding: 30px 20px 50px 20px;
+  padding: 30px 20px 30px 20px;
   grid-template-columns: 1fr;
   border: 1px solid black;
   border-radius: 20px;
@@ -160,6 +149,7 @@ header {
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 20px;
+  color: #000;
 }
 
 .FormularioLabelText{
@@ -167,6 +157,7 @@ header {
   font-weight: bold;
   font-size: 15px;
   padding: 10px;
+  color: #000;
 }
 .FormularioInput{
   width: 100%;
@@ -184,6 +175,8 @@ header {
 }
 
 .BoxButtom{
+  width: 500px;
+  height: 40px;
   display: flex;
   justify-content: flex-end;
 }
@@ -209,6 +202,8 @@ header {
 }
 /*---------Resumen de Datos--------*/
 .BoxFormDatos{
+  width: 500px;
+  height: 440px;
   padding: 30px 20px 50px 20px;
   border: 1px solid black;
   border-radius: 20px;
@@ -224,28 +219,32 @@ header {
   margin: 0 5px 0 0;
   border-radius: 5px;
   background-color: #ffffff;
+  color: #8b8989;
 }
 .CajaServicioElegido div p{
   width: 230px;
   border: 2px solid #3dca48;
-  padding: 5px;
+  padding: 4px;
   margin: 0 5px 0 0;
   border-radius: 5px;
   background-color: #ffffff;
+  color: #8b8989;
 }
 .TextServicios{
   margin-top: 20px;
   font-weight: 700;
   font-size: 19px;
+  color: #000;
 }
 
 /*---------Barra de seguimiento por benja--------*/
-.caja{
+.cajaCirculos{
   display: flex;
   justify-content: space-between;
   width: 500px;
+  height: 90px;
   position: relative;
-  margin: 0 10px 50px 0;
+  margin: 0;
 }
 
 .paso{
@@ -316,6 +315,103 @@ header {
   justify-content: center;
   align-items: center;
 }
+/* Media */
+
+@media screen and (min-width: 768px){
+  :root{
+    --big-font-size: 5rem;
+    --normal-font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1320px) {
+  header {
+    padding: 0 50px;
+  }
+}
+
+@media only screen and (max-width: 1110px) {
+  header {
+    padding: 0 30px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  .hamburger .line {
+    width: 30px;
+    height: 3px;
+    background: var(--background-Blanco);
+    margin: 6px 0;
+  }
+  .nav-bar {
+    height: 0;
+    position: absolute !important;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: var(--navBar-Color);
+    transition: 0.5s;
+    overflow: hidden;
+    z-index: 100;
+  }
+  .nav-bar.active {
+    height: 450px;
+  }
+  .nav-bar ul {
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    transition: 0.6s;
+    opacity: 0;
+  }
+  .nav-bar.active ul {
+    opacity: 1;
+    color: var(--background-Blanco);
+  }
+  .nav-bar ul li a {
+    margin-bottom: 12px;
+  }
+  /*FormularioWizard*/
+  .cajaCirculos{
+    width: 350px;
+  }
+  .BoxForm{
+    width: 350px;    
+  }
+  .BoxFormDatos{
+    width: 350px;
+  }
+  .CajaDatoUsuario div p{
+    width: 150px;
+    height: 30px;
+    color: #8d8b8b;
+  }
+  .CajaServicioElegido div p{
+    width: 150px;
+    height: 30px;
+    color: #8d8b8b;
+  }
+  .FormularioLabelText{
+    font-size: 12px;
+    padding: 5px;
+  }
+  .TextServicios{
+    color: #000;
+  }
+  .TextoCheck{
+    color: #000;
+  }
+  .BoxButtom{
+    width: 350px;
+  }
+}
+
 
 /*---------FORMULARI ABAJO DE AQUI--------*/
 

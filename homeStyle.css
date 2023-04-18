@@ -4,10 +4,10 @@
 
 :root {
   --header-height: 3rem;
-  --navBar-Color: #FFF5E0;
-  --background-Blanco: #FFF5E0;
+  --navBar-Color: #fff5e0;
+  --background-Blanco: #fff5e0;
   --primary: #11101b;
-  --white: #FFF5E0;
+  --white: #fff5e0;
   --description: #fefefe;
   --navBar-Text-Color: #11101b;
   --description: #11101b;
@@ -18,7 +18,7 @@
   --background-Blanco: #11101b;
   --bg: #11101b;
   --primary: #ec994b;
-  --navBar-Text-Color: #FFF5E0;
+  --navBar-Text-Color: #fff5e0;
   --white: #11101b;
   --description: #fefefe;
 }
@@ -116,7 +116,6 @@ header {
   background: var(--background-Blanco);
 }
 
-
 /* Home */
 
 .home {
@@ -148,7 +147,6 @@ header {
   margin-bottom: 1rem;
   position: relative;
 }
-
 
 .home__description {
   color: var(--description);
@@ -225,7 +223,7 @@ footer {
 
 .footer-bottom span {
   text-transform: uppercase;
-  opacity: .4;
+  opacity: 0.4;
   font-weight: 200;
   color: var(--navBar-Text-Color);
 }
@@ -345,7 +343,6 @@ footer {
       bottom: -435%;
       transform: translate(-50%, -50%);
     }
-
   }
 
   @media screen and (max-width: 580px) {

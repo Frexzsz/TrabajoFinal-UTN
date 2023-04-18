@@ -91,10 +91,10 @@ window.addEventListener("load", function () {
         document.body.classList.toggle("dark-theme");
 
         if (document.body.classList.contains("dark-theme")) {
-            btnIcon.src = "imagenesDelHome/Sun.png"
+            btnIcon.src = "/ImagenesDelHome/Sun.png"
             btnText.innerHTML = "Light";
         } else {
-            btnIcon.src = "imagenesDelHome/Moon.png"
+            btnIcon.src = "/ImagenesDelHome/Moon.png"
             btnText.innerHTML = "Dark";
         }
     }

@@ -125,3 +125,68 @@ function convertirpdf(){
 
     doc.save("Caterin Contrato");
 };
+
+/*------- validaciones ----------*/
+const regex = {
+  individuo: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
+  correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+  telefono: /^\d{10}$/
+}
+
+let formulariousuario = document.getElementById('Usuario');
+let entradausuario = document.querySelectorAll('#Usuario input');
+
+
+entradausuario.forEach(function(entrada){
+  entrada.addEventListener('change', validarformulario);
+  entrada.addEventListener('blur', validarformulario);
+});
+
+function validarformulario(evento){
+  switch (evento.target.name){
+    case 'nombre':
+      if(regex.individuo.test(evento.target.value)){
+        document.getElementById('nombre').classList.remove('formulariomal');
+        document.getElementById('nombre').classList.add('formulariobien');
+        document.getElementById('msjerror').classList.remove('mensajeerror-activo');
+      } else {
+        document.getElementById('nombre').classList.remove('formulariobien');
+        document.getElementById('nombre').classList.add('formulariomal');
+        document.getElementById('msjerror').classList.add('mensajeerror-activo');
+      }
+    break;
+    case 'apellido':
+      if(regex.individuo.test(evento.target.value)){
+        document.getElementById('apellido').classList.remove('formulariomal');
+        document.getElementById('apellido').classList.add('formulariobien');
+        document.getElementById('msjerrora').classList.remove('mensajeerror-activo');
+      } else {
+        document.getElementById('apellido').classList.remove('formulariobien');
+        document.getElementById('apellido').classList.add('formulariomal');
+        document.getElementById('msjerrora').classList.add('mensajeerror-activo');
+      }
+    break;
+    case 'telefono':
+      if(regex.telefono.test(evento.target.value)){
+        document.getElementById('telefono').classList.remove('formulariomal');
+        document.getElementById('telefono').classList.add('formulariobien');
+        document.getElementById('msjerrort').classList.remove('mensajeerror-activo');
+      } else {
+        document.getElementById('telefono').classList.remove('formulariobien');
+        document.getElementById('telefono').classList.add('formulariomal');
+        document.getElementById('msjerrort').classList.add('mensajeerror-activo');
+      }
+    break;
+    case 'correo':
+      if(regex.correo.test(evento.target.value)){
+        document.getElementById('correo').classList.remove('formulariomal');
+        document.getElementById('correo').classList.add('formulariobien');
+        document.getElementById('msjerrorc').classList.remove('mensajeerror-activo');
+      } else {
+        document.getElementById('correo').classList.remove('formulariobien');
+        document.getElementById('correo').classList.add('formulariomal');
+        document.getElementById('msjerrorc').classList.add('mensajeerror-activo');
+      }
+    break;
+  }
+}

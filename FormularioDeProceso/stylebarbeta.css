@@ -416,3 +416,19 @@ header {
 
 /*---------FORMULARI ABAJO DE AQUI--------*/
 
+/*---------validaciones --------*/
+
+.formulariobien{
+  border: 1px solid #08FF00;
+}
+.formulariomal{
+  border: 1px solid #FF0000;
+}
+.mensajeerror{
+  color: #FF0000;
+  display: none;
+}
+.mensajeerror-activo{
+  color: #FF0000;
+  display: block;
+}

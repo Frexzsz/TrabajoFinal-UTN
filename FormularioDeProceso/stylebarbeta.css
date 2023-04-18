@@ -142,8 +142,23 @@ header {
   grid-template-columns: 1fr;
   border: 1px solid black;
   border-radius: 20px;
-  background-color: #f0f0f0;
-} 
+  background-color: #ccccccb9;
+}
+.BoxForm2{
+  width: 500px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  padding: 30px 20px 30px 20px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: #ccccccb9;
+}
+.BoxElegirServicio{
+  margin: 0 0 50px 0;
+}
 
 .TextTitulos{
   margin-bottom: 20px;
@@ -161,7 +176,7 @@ header {
 }
 .FormularioInput{
   width: 100%;
-  background: #ffffff;
+  background: #f7f7f7;
   border: 3px solid transparent;
   border-radius: 5px;
   height: 30px;
@@ -207,7 +222,7 @@ header {
   padding: 30px 20px 50px 20px;
   border: 1px solid black;
   border-radius: 20px;
-  background-color: #f0f0f0;
+  background-color: #ccccccb9;
 }
 .CajaDatoUsuario, .CajaServicioElegido{
   display: flex;
@@ -222,7 +237,7 @@ header {
   color: #8b8989;
 }
 .CajaServicioElegido div p{
-  width: 230px;
+  width: 458px;
   border: 2px solid #3dca48;
   padding: 4px;
   margin: 0 5px 0 0;
@@ -242,9 +257,9 @@ header {
   display: flex;
   justify-content: space-between;
   width: 500px;
-  height: 90px;
+  height: 55px;
   position: relative;
-  margin: 0;
+  margin-bottom: 20px;
 }
 
 .paso{
@@ -255,7 +270,7 @@ header {
   border-radius: 50%;
   justify-content: center;
   align-items: center;
-  border: 4px solid lightgray;
+  border: 4px solid #d3d3d3;
   font-size:1.5rem;
   font-weight:bold;
   color: #d3d3d3;
@@ -265,7 +280,7 @@ header {
 .barra{
   height: 4px;
   width: 100%;
-  background-color: lightgray;
+  background-color: #d3d3d3;
   position: absolute;
   margin-top: 25px;
 }
@@ -280,7 +295,7 @@ header {
   color: #08FF00;
   border-color: #08FF00;
 }
-/*---------CheckFinal-------*/
+/*---------CheckFinalFormulario-------*/
 .boxCheck{
   width: 100%;
   height: 400px;
@@ -294,7 +309,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #f0f0f0;
+  background-color: #ccccccb9;
   border-radius: 20px;
 
 }
@@ -316,8 +331,47 @@ header {
   justify-content: center;
   align-items: center;
 }
-/* Media */
+.BoxPdfPadre{
+  width: 520px;
+  height: 40px;
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 40px;
+}
+.BoxPdf{
+  width: 131px;
+  height: 30px;
+  color: #000;
+  font-size: 12px;
+  border: 1px solid black;
+  border-radius: 15px;
+  cursor: pointer;
+  padding:5px;
+  text-align: center;
+  color: #9287eb;
+  background-color: #000000d1;
+}
+.BoxVolverHome{
+  width: 131px;
+  height: 30px;
+  color: #000;
+  font-size: 12px;
+  border: 1px solid black;
+  border-radius: 15px;
+  cursor: pointer;
+  padding:5px;
+  text-align: center;
+  color: #9287eb;
+  background-color: #000000d1;
+}
+.BoxVolverHome a{
+  text-decoration: none;
+  color: #9287eb;
+  
+}
 
+/*============Media===============*/
 @media screen and (min-width: 768px){
   :root{
     --big-font-size: 5rem;
@@ -412,10 +466,6 @@ header {
     width: 350px;
   }
 }
-
-
-/*---------FORMULARI ABAJO DE AQUI--------*/
-
 /*---------validaciones --------*/
 
 .formulariobien{
@@ -427,8 +477,68 @@ header {
 .mensajeerror{
   color: #FF0000;
   display: none;
+
 }
 .mensajeerror-activo{
   color: #FF0000;
   display: block;
+  font-size: 12px;
+}
+
+
+/* Footer */
+
+footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--navBar-Color);
+  height: auto;
+  width: 100%;
+  padding-bottom: 7px;
+  color: var(--navBar-Text-Color);
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-content h3 {
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 1rem;
+}
+
+.footer-content p {
+  max-width: 2000px;
+  word-spacing: 2px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 8px;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 8px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.footer-bottom span {
+  text-transform: uppercase;
+  opacity: .4;
+  font-weight: 200;
+  color: var(--navBar-Text-Color);
 }

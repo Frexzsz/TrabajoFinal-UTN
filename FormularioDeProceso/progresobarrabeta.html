@@ -40,17 +40,19 @@
             <a href="/Servicios/servicio.html">Servicios</a>
           </li>
           <li>
-            <a href="/PresentacionPersonal/sobreNosotros.html">Sobre Nosotros</a>
+            <a href="/PresentacionPersonal/sobreNosotros.html"
+              >Sobre Nosotros</a
+            >
           </li>
           <!--Dark/light mode-->
           <div class="toggle-btn" id="btn">
             <span id="btnText">Dark</span>
-            <img src="/ImagenesDelHome/Moon.png" alt="Moon" id="btnIcon">
+            <img src="/ImagenesDelHome/Moon.png" alt="Moon" id="btnIcon" />
           </div>
         </ul>
       </nav>
     </header>
-    <!---------------- formulario ----------------->
+    <!---------------- formularioBarradeProgreso ----------------->
     <section class="BoxCenter">
       <div class="BoxSecundario">
         <div class="cajaCirculos">
@@ -65,47 +67,73 @@
         <!---------------- formularioUsuario ----------------->
         <form class="BoxForm" id="Usuario">
           <label for="nombre" class="FormularioLabelText">Nombre:</label>
-          <input type="text" name="nombre" id="nombre" class="FormularioInput"/>
-          <p id="msjerror" class="mensajeerror">Solo letras, espacios, puede llevar acentos, 1 a 40 caracteres</p>
+          <input
+            type="text"
+            name="nombre"
+            id="nombre"
+            class="FormularioInput"
+          />
+          <p id="msjerror" class="mensajeerror">
+            Solo letras, espacios, puede llevar acentos, 1 a 40 caracteres
+          </p>
 
           <label for="apellido" class="FormularioLabelText">Apellido:</label>
-          <input type="text" name="apellido" id="apellido" class="FormularioInput"/>
-          <p id="msjerrora" class="mensajeerror">Solo letras, espacios, puede llevar acentos, 1 a 40 caracteres</p>
+          <input
+            type="text"
+            name="apellido"
+            id="apellido"
+            class="FormularioInput"
+          />
+          <p id="msjerrora" class="mensajeerror">
+            Solo letras, espacios, puede llevar acentos, 1 a 40 caracteres
+          </p>
 
           <label for="telefono" class="FormularioLabelText">Telefono:</label>
-          <input type="text" name="telefono" id="telefono" class="FormularioInput"/>
-          <p id="msjerrort" class="mensajeerror">Ingrese su numero correctamente, sin el 0 y el 15</p>
+          <input
+            type="text"
+            name="telefono"
+            id="telefono"
+            class="FormularioInput"
+          />
+          <p id="msjerrort" class="mensajeerror">
+            Ingrese su numero correctamente, sin el 0 y el 15
+          </p>
 
           <label for="correo" class="FormularioLabelText">Correo:</label>
-          <input type="text" name="correo" id="correo" class="FormularioInput"/>
+          <input
+            type="text"
+            name="correo"
+            id="correo"
+            class="FormularioInput"
+          />
           <p id="msjerrorc" class="mensajeerror">Ingrese un correo valido</p>
-
         </form>
         <div class="BoxButtom" id="btn1">
-          <button class="btn_siguiente-1 styleSiguiente" onClick="datoUsuario()">Siguiente</button>
+          <button
+            class="btn_siguiente-1 styleSiguiente"
+            onClick="datoUsuario()"
+          >
+            Siguiente
+          </button>
         </div>
         <!---------------- formulario Servicio----------------->
         <div hidden="" id="Servicio">
-          <form class="BoxForm">
-            <label for="servicio" class="FormularioLabelText"
-              >Elegir Servicio:</label
+          <form class="BoxForm2">
+            <div class="BoxElegirServicio">
+              <label for="servicio" class="FormularioLabelText"
+                >Elegir Servicio:</label
+              >
+              <select class="FormularioInput" id="servicioSelect">
+                <option>Servicio de buffet para empresas</option>
+                <option>Servicio de catering para fiestas</option>
+                <option>Servicio de Asadores</option>
+                <option style="display: none" selected></option>
+              </select>
+            </div>
+            <label for="fecha" class="FormularioLabelText"
+              >Fecha del Evento:</label
             >
-            <select class="FormularioInput" id="servicioSelect">
-              <option>Servicio de Empresa</option>
-              <option>Servicio de Fiesta</option>
-              <option style="display: none" selected></option>
-            </select>
-            <label for="fecha" class="FormularioLabelText">Fecha:</label>
             <input type="date" name="" id="fecha" class="FormularioInput" />
-            <label for="comida" class="FormularioLabelText">Comida:</label>
-            <textarea id="comentarioComida"></textarea>
-            <select name="comida" id="comida" class="FormularioInput Comida">
-              <option>arroz</option>
-              <option>fidio</option>
-              <option>lenteja</option>
-              <option>polenta</option>
-              <option>mortadela (solo premium)</option>
-            </select>
           </form>
           <div class="BoxButtom1">
             <button class="btn_atras-1 styleAtras" id="btn-Back1">Atras</button>
@@ -164,20 +192,6 @@
                   <p id="resultadoFecha"></p>
                 </div>
               </div>
-              <div>
-                <label for="nombre" class="FormularioLabelText"
-                  >Comida personalizada:</label
-                >
-                <div>
-                  <p id="resultadoComentario"></p>
-                </div>
-                <label for="nombre" class="FormularioLabelText"
-                  >Comida seleccionada:</label
-                >
-                <div>
-                  <p id="resultadoComidaElegida"></p>
-                </div>
-              </div>
             </div>
           </div>
           <div class="BoxButtom1">
@@ -192,11 +206,36 @@
               <span>¡Gracias por contratarnos!</span>
             </div>
             <span class="Check paso4"></span>
-            <button onclick="convertirpdf()">bajar pdf</button>
+            <div class="BoxPdfPadre">
+              <div class="BoxPdf">
+                <div class="boxBorde" onclick="convertirpdf()">
+                  <p>Su Comprobante</p>
+                </div>
+              </div>
+              <div class="BoxVolverHome">
+                <a href="/home.html">Volver al Home</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
+    <footer>
+      <div class="footer-content">
+        <h3>Catering Company</h3>
+        <p>
+          Catering Company es una marca de catering de alta calidad que se
+          dedica a proporcionar servicios excepcionales y personalizados a
+          clientes en toda Argentina.
+        </p>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          copyright &copy;2023 Catering Company. designed by
+          <span>programming students</span>
+        </p>
+      </div>
+    </footer>
     <script src="/FormularioDeProceso/wizardJquery/wizardJquery.js"></script>
   </body>
 </html>

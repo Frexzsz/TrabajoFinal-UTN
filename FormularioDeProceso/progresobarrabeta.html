@@ -17,7 +17,6 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="/FormularioDeProceso//hamburguesa/hamburguesa.js"></script>
-    <script src="/FormularioDeProceso/wizardJquery/wizardJquery.js"></script>
     <script src="/FormularioDeProceso/darkmode/darkmode.js"></script>
   </head>
   <body>
@@ -66,41 +65,24 @@
         <!---------------- formularioUsuario ----------------->
         <form class="BoxForm" id="Usuario">
           <label for="nombre" class="FormularioLabelText">Nombre:</label>
-          <input
-            type="text"
-            name="nombre"
-            id="nombre"
-            class="FormularioInput"
-          />
+          <input type="text" name="nombre" id="nombre" class="FormularioInput"/>
+          <p id="msjerror" class="mensajeerror">Solo letras, espacios, puede llevar acentos, 1 a 40 caracteres</p>
+
           <label for="apellido" class="FormularioLabelText">Apellido:</label>
-          <input
-            type="text"
-            name="apellido"
-            id="apellido"
-            class="FormularioInput"
-          />
+          <input type="text" name="apellido" id="apellido" class="FormularioInput"/>
+          <p id="msjerrora" class="mensajeerror">Solo letras, espacios, puede llevar acentos, 1 a 40 caracteres</p>
+
           <label for="telefono" class="FormularioLabelText">Telefono:</label>
-          <input
-            type="text"
-            name="telefono"
-            id="telefono"
-            class="FormularioInput"
-          />
+          <input type="text" name="telefono" id="telefono" class="FormularioInput"/>
+          <p id="msjerrort" class="mensajeerror">Ingrese su numero correctamente, sin el 0 y el 15</p>
+
           <label for="correo" class="FormularioLabelText">Correo:</label>
-          <input
-            type="text"
-            name="correo"
-            id="correo"
-            class="FormularioInput"
-          />
+          <input type="text" name="correo" id="correo" class="FormularioInput"/>
+          <p id="msjerrorc" class="mensajeerror">Ingrese un correo valido</p>
+
         </form>
         <div class="BoxButtom" id="btn1">
-          <button
-            class="btn_siguiente-1 styleSiguiente"
-            onClick="datoUsuario()"
-          >
-            Siguiente
-          </button>
+          <button class="btn_siguiente-1 styleSiguiente" onClick="datoUsuario()">Siguiente</button>
         </div>
         <!---------------- formulario Servicio----------------->
         <div hidden="" id="Servicio">
@@ -215,5 +197,6 @@
         </div>
       </div>
     </section>
+    <script src="/FormularioDeProceso/wizardJquery/wizardJquery.js"></script>
   </body>
 </html>

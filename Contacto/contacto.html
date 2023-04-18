@@ -6,9 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
-</head>
-
-<body>
     <script scr="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="index.js"></script>
     <link rel="stylesheet" href="style.css" />
@@ -19,6 +16,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
     <!-- ------------------ animate.css----------------- -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+</head>
+
+<body>
 
     <!-- ====================== header =========================== -->
 
@@ -33,32 +34,34 @@
         <nav class="nav-bar">
             <ul>
                 <li>
-                    <a href="../home.html">Home</a>
+                    <a class="text-decoration-none " href="/home.html">Home</a>
                 </li>
                 <li>
                     <a href="#" class="active">Contacto</a>
                 </li>
                 <li>
-                    <a href="/Servicios/servicio.html">Servicios</a>
+                    <a class="text-decoration-none " href="/Servicios/servicio.html">Servicios</a>
                 </li>
                 <li>
-                    <a href="/Sobre Nosotros/sobreNosotros.html">Sobre Nosotros</a>
+                    <a class="text-decoration-none " href="/PresentacionPersonal/sobreNosotros.html">Sobre Nosotros</a>
                 </li>
+                <!--Dark/light mode-->
+                <div class="toggle-btn" id="btn">
+                    <span id="btnText">Dark</span>
+                    <img src="ImagenesDelHome/Moon.png" alt="Moon" id="btnIcon">
+                </div>
+                <!--Dark/light mode terminado-->
             </ul>
         </nav>
     </header>
 
     <!-- ======================== form ====================== -->
-   
+
     <div class="contact container text-center my-5  pt-5 px-5 rounded-5">
         <h1>Catering Company</h1>
         <div class="row">
-<<<<<<< Updated upstream:Contacto/index.html
-            <div class="form col-6  text-start  my-5 py-5">
-=======
-    
+
             <form class="form col-6  text-start  my-5 py-5 needs-validation" novalidate>
->>>>>>> Stashed changes:Contacto/contacto.html
                 <div class="oracion1 mb-5 mx-5">
                     <h3>Esperamos su consulta</h3>
                 </div>
@@ -67,29 +70,38 @@
                 </div>
                 <div class="mb-5 mx-5 ">
                     <label for="imp1" class="form-label">Nombre *</label>
-                    <input type="text" id="imp1">
+                    <input type="text" id="imp1" class="form-control " required>
+                    <div class="invalid-feedback">
+                        no ha ingresado su nombre
+                    </div>
                 </div>
                 <div class="mb-5 mx-5">
                     <label for="imp3" class="form-label">Teléfono</label>
-                    <input type="number"  id="imp3">
+                    <input type="number" id="imp3">
                 </div>
                 <div class="mb-5 mx-5">
                     <label for="imp4" class="form-label">Email *</label>
-                    <input type="email"  id="imp4">
+                    <input type="email" id="imp4" class="form-control" required>
+                    <div class="invalid-feedback">
+                        no ha ingresado su email
+                    </div>
                 </div>
                 <div class="mb-5 mx-5">
                     <label for="imp5" class="form-label">Asunto</label>
-                    <input type="email"  id="imp5">
+                    <input type="email" id="imp5">
                 </div>
                 <div class="mb-1 mx-5">
                     <label for="txa" class="form-label">Mensaje</label>
-                    <textarea  id="txa" rows="3"></textarea>
+                    <textarea id="txa" rows="3"></textarea>
                 </div>
                 <div class="d-grid gap-2 px-5 mt-5">
-                    <button class="btn btn-outline-light" type="button">Enviar</button>
+                    <button class="btn btn-outline-light" type="submit" onclick="validarForm()">Enviar</button>
                 </div>
-                
-            </div>
+
+
+                <div id="textof" class="mx-5 pt-4 text-center"></div>
+
+            </form>
             <!-- ---------------------------contacto------------------- -->
             <div class="contacto col-6 d-flex  flex-column my-5  py-5 text-center" id="datos">
                 <h2>contactanos</h2>
@@ -109,7 +121,7 @@
                 </div>
                 <!-- ---------------mapa (API)---------- -->
                 <div class="mapa text-center mb-3 mx-3">
-    
+
                     <div id="map"></div>
                     <script src="index.js"></script>
                     <script
@@ -120,21 +132,27 @@
                     <p>Redes sociales </p>
                     <div class="logos d-flex justify-content-center">
                         <a href="#"><i class="bi bi-facebook mx-3"></i></i> </a>
-                        
+
                         <a href="#"><i class="bi bi-twitter mx-2"></i></i> </a>
-                        
+
                         <a href="#"><i class="bi bi-instagram mx-3"></i> </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <footer>
+        <div class="footer-content">
+            <h3>Catering Company</h3>
+            <p>Catering Company es una marca de catering de alta calidad que se dedica a proporcionar servicios
+                excepcionales y personalizados a clientes en toda Argentina.
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2023 Catering Company. designed by <span>programming students</span></p>
+        </div>
+    </footer>
 
-    <!-- --------------container de los datos---------------- -->
 
-
-    <!-- </div>
-    </div> -->
     <!-- -------------------------------JavaScript------------------- -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"

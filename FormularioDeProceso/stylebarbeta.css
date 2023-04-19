@@ -476,6 +476,20 @@ header {
   .BoxButtom{
     width: 350px;
   }
+  .CajaServicioElegido div p{
+    width: 305px;
+  }
+  .CajaServicioElegido{
+    margin-top: 20px;
+  }
+  .CajaDatoUsuario div p{
+    width: 151px;
+    font-size: 10px;
+    color: #000;
+    padding-left: 5px;
+    display: flex;
+    align-items: center;
+  }
 }
 /*---------validaciones --------*/
 

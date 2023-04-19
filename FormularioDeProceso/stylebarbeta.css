@@ -120,7 +120,7 @@ header {
 
 .BoxCenter{
   width: 100%;
-  height: 100vh;
+  height: 775px;
   display: grid;
   align-items: center;
   justify-content: center;
@@ -441,6 +441,14 @@ header {
   }
   .BoxForm{
     width: 350px;    
+  }
+  .BoxForm2, .boxCheck{
+    width: 350px;    
+  }
+  .BoxPdfPadre{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
   }
   .BoxFormDatos{
     width: 350px;

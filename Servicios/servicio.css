@@ -304,79 +304,12 @@ footer{
   .nav-bar ul li a {
     margin-bottom: 12px;
   }
-}
-
-@media screen and (max-width: 900px) {
-  .home .home__container{
-    grid-template-columns: 1fr;
-    justify-content: center;
-  }
-
-  .home__title{
-    text-align: center;
-    font-size: 2rem;
-  }
-
-  .home__description{
-    text-align: center;
-    justify-content: center;
-  }
-
-  .home__container{
+  .containerHijo{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
   }
-
-  #catering{
-    display: flex;
-    justify-content: center;
-    width: 85%;
-    height: auto;
-    max-width: 200px;
+  footer{
+    position: relative;
+    top: 77rem;
   }
-
-  .home__button{
-    position: absolute;
-    font-size: 1rem;
-    left: 50%;
-    bottom: -600%;
-    transform: translate(-50%, -50%);
-  }
-
-@media screen and (max-width: 660px) {
-  .home__button{
-    position: absolute;
-    font-size: 1rem;
-    left: 50%;
-    bottom: -435%;
-    transform: translate(-50%, -50%);
-  }
-
-}
-
-@media screen and (max-width: 580px) {
-  .home .home__container{
-    grid-template-columns: 1fr;
-    justify-content: center;
-  }
-
-  .home__title{
-    text-align: center;
-    font-size: 2rem;
-  }
-
-  .home__description{
-    text-align: center;
-    justify-content: center;
-  }
-
-  .home__button{
-    position: absolute;
-    font-size: 0.5rem;
-    left: 50%;
-    bottom: -380%;
-    transform: translate(-50%, -50%);
-  }
-}
 }
